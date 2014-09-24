@@ -95,6 +95,6 @@ gulp.task('connect', function() {
 });
 
 // Default Task
-gulp.task('default', ['lint', 'scripts', 'watch']);
+gulp.task('default', ['lint', 'scripts', 'sassminify', 'watch', 'livereload-localserver']);
 
 gulp.task('build', ['scripts', 'sassminify']);

@@ -1,12 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>svg play</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>svg play</title>
+        <link rel="stylesheet" href="/css/dist/all.min.css">
+    </head>
 
-    <h1>hello</h1>
-    <script src="js/dist/all.min.js"></script>
-</body>
+    <body>
+
+        <h2>Sample unemployment data for a few Ohio counties </h2>
+        <table>
+            <tr>
+                <th>FIPS Code</th>
+                <th>County</th>
+                <th>State</th>
+                <th>Unemployment Rate</th>
+            </tr>
+            <tr>
+                <td>39147</td>
+                <td>Seneca County</td>
+                <td>OH</td>
+                <td>12.0</td>
+            </tr>
+            <tr>
+                <td>39149</td>
+                <td>Shelby County</td>
+                <td>OH</td>
+                <td>11.9</td>
+            </tr>
+            <tr>
+                <td>39151</td>
+                <td>Stark County</td>
+                <td>OH</td>
+                <td>11.0</td>
+            </tr>
+            <tr>
+                <td>39153</td>
+                <td>Summit County</td>
+                <td>OH</td>
+                <td>9.6</td>
+            </tr>
+        </table>
+
+
+        <img src="img/counties.svg" alt="" class="image">
+
+        <p>
+            With a little bit of code, we can combine our dataset and SVG image
+            to create <a class="map" href="#">something</a> very informative.
+        </p>
+        <div class="results-container hidden">
+            <img src="img/unemployment2009.svg" alt="unemployment">
+
+            <div class="key">
+                <p>US Unemployment 2009</p>
+                <div class="category">
+                    <div class="seven color" style="background-color: #5F002A"></div>
+                    <span>> 20% </span>
+                </div>
+
+                <div class="category">
+                    <div class="six color" style="background-color: #980043"></div>
+                    <span>> 15% </span>
+                </div>
+
+                <div class="category">
+                    <div class="five color" style="background-color: #DD1C77"></div>
+                    <span>> 10% </span>
+                </div>
+
+                <div class="category">
+                    <div class="four color" style="background-color: #DF65B0"></div>
+                    <span>> 8% </span>
+                </div>
+
+                <div class="category">
+                    <div class="three color" style="background-color: #C994C7"></div>
+                    <span>> 6% </span>
+                </div>
+
+                <div class="category">
+                    <div class="two color" style="background-color: #D4B9DA"></div>
+                    <span>> 2% </span>
+                </div>
+
+                <div class="category">
+                    <div class="one color" style="background-color: #F1EEF6"></div>
+                    <span><= 2% </span>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/dist/all.min.js"></script>
+    </body>
 </html>

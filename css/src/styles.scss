@@ -1,0 +1,55 @@
+body {
+    font-family: sans-serif;
+
+    table, tr, td, th {
+        border: 1px solid #ccc;
+        padding: 5px;
+    }
+
+    th {
+        font-weight: heavy;
+    }
+
+    .image {
+        margin-top: 50px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .results-container {
+        position: relative;
+    }
+
+    .key {
+        position: absolute;
+        top: 120px;
+        display: inline-block;
+        p {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .category {
+            display: block;
+            width: 200px;
+            float: left;
+            clear: both;
+
+            div.color {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                padding: 5px;
+            }
+
+            span {
+                font-size: 10px;
+                position: relative;
+                top: -8px;
+            }
+        }
+    }
+
+}
