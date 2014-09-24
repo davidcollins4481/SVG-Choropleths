@@ -50,4 +50,36 @@
         return $svg->asXML();
     }
 
-    echo unemployment2009();
+    function presidentialElection() {
+        $csvfile = 'datasets/US_elect_county_new.csv';
+        $svgfile = "img/counties.svg";
+
+
+        $svg = simplexml_load_file("img/counties.svg");
+        $svg->registerXPathNamespace('svg', 'http://www.w3.org/2000/svg');
+
+        $path_style = 'stroke:#FFFFFF;stroke-opacity:1;
+        stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-linecap:butt;
+        marker-start:none;stroke-linejoin:bevel;fill:';
+
+        if (($handle = fopen($csvfile, "r")) !== FALSE) {
+            while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                $fips = $data[2];
+                if ($fips) {
+                    $obama_vote  = $data[4];
+                    $romney_vote = $data[6];
+
+                    $color = $obama_vote > $romney_vote ? 'blue' : 'red';
+                    #echo "***" . $fips . "***", "\n";
+                    $path = $svg->xpath('//svg:path[@id=' . $fips .']')[0];
+                    if ($path) {
+                        $path->attributes()['style'] = $path_style . $color;
+                    }
+                }
+            }
+
+            return $svg->asXML();
+        }
+    }
+
+    echo presidentialElection();
