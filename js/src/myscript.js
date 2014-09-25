@@ -5,7 +5,7 @@
             e.preventDefault();
             $('.results-container').removeClass('hidden');
             //$('.results-container').scroll();
-            //$('body').scrollTo('.results-container');
+            $.scrollTo('.results-container');
         });
     });
 

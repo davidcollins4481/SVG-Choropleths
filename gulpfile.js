@@ -13,6 +13,7 @@ var connect = require('gulp-connect');
 var paths = {
     scripts: [
         'bower_components/jquery/dist/jquery.js',
+        'bower_components/jquery.scrollTo/jquery.scrollTo.js',
         'js/src/myscript.js'
     ],
     stylesheets: [
