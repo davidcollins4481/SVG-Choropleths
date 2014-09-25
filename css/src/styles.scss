@@ -15,7 +15,8 @@ body {
     }
 
     .hidden {
-        display: none;
+        //display: none;
+        visibility: hidden;
     }
 
     .results-container {
